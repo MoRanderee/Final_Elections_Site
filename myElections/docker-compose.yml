@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 8000:8000
+
+  #   environment:
+  #     - DJANGO_DEBUG = True
+  #     # <!-- - DJANGO_SECRET_KEY=your_secret_key_here  # Replace with your Django secret key -->
+  #   depends_on:
+  #     - db
+
+  # db:
+  #   image: sqlite:latest  # Use the desired database image
+  #   volumes:
+  #     - ./sqlite3: app/db.sqlite3

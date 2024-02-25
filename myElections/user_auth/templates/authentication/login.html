@@ -1,0 +1,22 @@
+<h2> Login as voter </h2>
+
+<!-- logging for existing users: -->
+<form action="{% url 'user_auth:authenticate_user' %}" method="post">
+    {% csrf_token %}
+    
+    <label>Username</label>
+    <input type="text" name="username" placeholder="User" required>
+    <br/><br/>
+
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <br/><br/>
+    
+    <input type="submit" value="Login" />
+
+</form>
+
+<!-- signup for new users: -->
+<a href="http://127.0.0.1:8000/user_auth/signup">
+    <button>Sign up</button>
+  </a>

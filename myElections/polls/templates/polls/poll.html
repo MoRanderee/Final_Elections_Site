@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Elections</title>
+    </head>
+
+    <body>
+        <p>Logged in</p>
+        
+        <h1> Welcome, </h1>
+        <h2>Support your party</h2>
+
+        {% if latest_question_list %}
+        <ul>
+            {% for question in latest_question_list %}
+            <li>
+                <a href = "{% url 'polls:detail' question.id %}">
+                    {{ question.question_text }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No polls are available.</p>
+        {% endif %}
+
+        <!-- logout button -->
+        <a href="http://127.0.0.1:8000/user_auth/logout">
+            <button>Logout</button>
+          </a>
+        
+    </body>
+    
+
+</html>
+

@@ -1,0 +1,10 @@
+myElections
+===========
+
+.. toctree::
+   :maxdepth: 4
+
+   manage
+   myPolls
+   polls
+   user_auth
